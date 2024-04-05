@@ -38,7 +38,20 @@ class _MenuBar extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return Column(
-      
+      children: <Widget>[
+        Row(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            Expanded(
+              child: MenuBar(
+                children: [
+                  MenuEntry.build(_get)
+                ],
+              ),
+            )
+          ],
+        )
+      ],
     );
   }
   
